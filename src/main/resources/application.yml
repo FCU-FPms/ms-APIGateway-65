@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: microservice-api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+
+
+
+server:
+  port: 46557
+  connection-timeout: 300000
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 140.134.26.65
+  client:
+    serviceUrl:
+      defaultZone: http://140.134.26.65:50608/eureka/
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+        
+
